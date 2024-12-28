@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QYUTIE NAILS</title>
+
+  <!-- Menambahkan favicon -->
+  <link rel="icon" href="icon.png" type="image/x-icon">
+  
+  <!-- Jika menggunakan gambar PNG -->
+  <!-- <link rel="icon" href="favicon.png" type="image/png"> -->
+  
+  <style>
+    /* CSS kamu yang lain */
+  </style>
+
+  <style>
+    @font-face {
+      font-family: 'BaksoSapi';
+      src: url('path-to-your-font-folder/BaksoSapi.ttf');
+    }
+
+    body, h1, h2, h3, p, a {
+      margin: 0;
+      padding: 0;
+      font-family: 'BaksoSapi', sans-serif;
+      color: #000;
+      background-color: #FFF9C4;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+      background-size: cover;
+      background: none;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: white;
+      background-color: black;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1em;
+      padding: 8px 15px;
+      border-radius: 50px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover, nav a:focus, nav a:active {
+      background-color: #1E88E5;
+      color: white;
+      font-weight: 600;
+    }
+
+    .main-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 20px 0;
+      padding: 10px;
+    }
+
+    .product {
+      text-align: center;
+      background: #A7C9FF;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .product h2 {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #FF9800;
+    }
+
+    .product p {
+      font-size: 0.9em;
+      color: #000;
+      background-color: #A7C9FF;
+      padding: 8px;
+      border-radius: 8px;
+      margin-top: 5px;
+    }
+
+    footer {
+      background-color: #FFF9C4;
+      color: black;
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer p {
+      font-size: 0.9em;
+    }
+
+    #home, #testimoni, #shop {
+      padding: 20px;
+      text-align: center;
+      background-color:  #FFF9C4;
+      color: #FFF;
+    }
+
+    #home h2, #testimoni h2, #shop h2 {
+      font-size: 1.8em;
+    }
+
+    #home p, #testimoni p, #shop p {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    #home .gallery, #testimoni .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    #home .gallery img, #testimoni .gallery img {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .contact-btn {
+      background-color: #25D366;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 50px;
+      font-size: 1em;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>QYUTIE NAILS</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#shop">Shop</a>
+      <a href="https://wa.me/6283134178545" class="contact-btn" target="_blank">Contact</a>
+    </nav>
+  
+  </header>
+
+  <section id="home">
+    <h2>Profil</h2>
+    <p>"Hai girls 💅 Aku di sini buat bikin kuku kamu jadi lebih keren dan unik! Setiap desain aku buat dengan cinta dan detail, jadi siap-siap bikin kuku kamu jadi perhatian banyak orang! Kalau kamu suka yang lucu, chic, atau bahkan custom sesuai konser idol favorit, aku siap bantu kamu. Yuk, bikin kuku kamu jadi karya seni mini yang nggak cuma bikin kamu happy, tapi juga bikin orang lain terpukau! 😘✨"</p>
+
+    <h3>Galeri Desain Nail Art</h3>
+    <div class="gallery">
+      <img src="produk1.jpg" alt="Konser Idol Series">
+      <img src="produk2.jpg" alt="Kawaii Characters">
+      <img src="produk3.jpg" alt="Minimalist Chic">
+      <img src="produk4.jpg" alt="Seasonal Themes">
+    </div>
+  </section>
+
+
+
+  <section id="testimoni">
+    <h2>Testimoni</h2>
+  
+    <!-- Formulir untuk upload foto -->
+    <form id="uploadForm">
+      <label for="testimonialImage">Kirim foto testimoni kamu:</label>
+      <input type="file" id="testimonialImage" accept="image/*" onchange="previewImage(event)">
+      <button type="submit">Kirim Foto</button>
+    </form>
+  
+    <!-- Galeri testimoni -->
+    <div class="gallery" id="testimonialGallery">
+      <img src="10.jpg" alt="Testimoni 10">
+      <img src="11.jpg" alt="Testimoni 11">
+      <img src="12.jpg" alt="Testimoni 12">
+      <img src="13.jpg" alt="Testimoni 13">
+      <img src="14.jpg" alt="Testimoni 14">
+      <img src="15.jpg" alt="Testimoni 15">
+      <img src="16.jpg" alt="Testimoni 16">
+      <img src="17.jpg" alt="Testimoni 17">
+      <img src="18.jpg" alt="Testimoni 18">
+    </div>
+  </section>
+  
+  
+  <script>
+    function previewImage(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+  
+      reader.onload = function() {
+        const img = document.createElement('img');
+        img.src = reader.result;
+        img.alt = 'Uploaded Testimonial';
+        img.style.width = '100px';
+        img.style.height = '100px';
+        img.style.borderRadius = '12px';
+        img.style.objectFit = 'cover';
+        
+        // Menambahkan gambar yang diunggah ke galeri testimonial
+        const gallery = document.getElementById('testimonialGallery');
+        gallery.appendChild(img);
+      };
+  
+      reader.readAsDataURL(file);
+    }
+  </script>
+  
+
+  <section id="shop" class="main-section">
+    <div class="product">
+      <a href="https://wa.me/6283134178545?text=Saya%20tertarik%20dengan%20produk%201" target="_blank">
+        <img src="produk1.jpg" alt="Konser Idol Series">
+        <h2>Konser Idol Series </h2>
+        <p>Desain dengan tema ala ala bias kamu biar makin semangat buat nonton!</p>
+        <p><strong>Detail:</strong> bisa custom sesuai konser 💕</p>
+      </a>
+    </div>
+    <div class="product">
+      <a href="https://wa.me/6283134178545?text=Saya%20tertarik%20dengan%20produk%202" target="_blank">
+        <img src="produk2.jpg" alt="Kawaii Characters">
+        <h2>Kawaii Characters 🐻</h2>
+        <p>Desain berbasis karakter lucu seperti beruang, kucing, dan kelinci.</p>
+        <p><strong>Detail:</strong> Kombinasi warna cerah dengan aksen glitter.</p>
+      </a>
+    </div>
+    <div class="product">
+      <a href="https://wa.me/6283134178545?text=Saya%20tertarik%20dengan%20produk%203" target="_blank">
+        <img src="produk3.jpg" alt="Minimalist Chic">
+        <h2>Minimalist Chic ✨</h2>
+        <p>Desain sederhana tapi elegan. Fokus pada pola geometris dan warna solid atau warna pastel.</p>
+        <p><strong>Detail:</strong> Warna monokrom, pastel, garis-garis tipis, atau aksen gold.</p>
+      </a>
+    </div>
+    <div class="product">
+      <a href="https://wa.me/6283134178545?text=Saya%20tertarik%20dengan%20produk%204" target="_blank">
+        <img src="produk4.jpg" alt="Seasonal Themes">
+        <h2>Seasonal Themes 🌟</h2>
+        <p>Desain spesial untuk momen tertentu, seperti:</p>
+        <p><strong>Detail:</strong> Natal: Pohon natal dan salju, Halloween: Labu imut dan hantu lucu, Valentine: Hati dan bunga.</p>
+      </a>
+    </div>
+  </section>
+
+<footer>
+<p>&copy; 2024 QYUTIE NAILS. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
